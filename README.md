@@ -28,7 +28,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: terraform
-        uses: buluma/terraform-action@0.1.0
+        uses: buluma/terraform-github-action@0.1.0
 ```
 
 To use another `action` on a specific terraform directory, change this example to you needs:
@@ -45,22 +45,22 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: terraform init
-        uses: buluma/terraform-action@0.1.0
+        uses: buluma/terraform-github-action@0.1.0
         with:
           action: init
           directory: ./example
       - name: terraform validate
-        uses: buluma/terraform-action@0.1.0
+        uses: buluma/terraform-github-action@0.1.0
         with:
           action: validate
           directory: ./example
       - name: terraform plan
-        uses: buluma/terraform-action@0.1.0
+        uses: buluma/terraform-github-action@0.1.0
         with:
           action: plan
           directory: ./example
       - name: terraform apply
-        uses: buluma/terraform-action@0.1.0
+        uses: buluma/terraform-github-action@0.1.0
         with:
           action: apply
           directory: ./example
