@@ -31,7 +31,7 @@ jobs:
         uses: buluma/terraform-github-action@0.1.1
 ```
 
-To use another `action` on a specific terraform directory, change this example to you needs:
+To use another `action` on a specific terraform directory, change this example to your needs:
 
 ```yaml
 ---
