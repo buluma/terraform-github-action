@@ -1,0 +1,28 @@
+---
+name: Test or run Terraform code
+description: Integrate terraform tests into your GitHub workflow.
+author: Michael Buluma <bulumaknight@gmail.com>
+
+inputs:
+  action:
+    description: |
+      The command to run.
+      For example: `validate` (default), `init`, `plan` or `apply`.
+    required: true
+    default: init
+  directory:
+    description: |
+      The directory where the Terraform files can be found.
+      This defaults to `./`, but can be set to i.e. `./example`.
+    required: true
+    default: ./
+runs:
+  using: docker
+  image: 'docker://robertdebock/terraform:1.0.3' # TODO: change to local
+  args:
+    - -chdir=${{ inputs.directory }}
+    - ${{ inputs.action }}
+
+branding:
+  icon: user-check
+  color: black
