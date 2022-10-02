@@ -1,5 +1,5 @@
 ---
-name: Test or run Terraform code
+name: Test or run Terraform code on GitHub.
 description: Integrate terraform tests into your GitHub workflow.
 author: Michael Buluma <bulumaknight@gmail.com>
 
@@ -18,7 +18,7 @@ inputs:
     default: ./
 runs:
   using: docker
-  image: 'docker://robertdebock/terraform:1.0.3' # TODO: change to local
+  image: 'docker://buluma/terraform:0.1.0'
   args:
     - -chdir=${{ inputs.directory }}
     - ${{ inputs.action }}

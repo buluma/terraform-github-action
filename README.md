@@ -1,6 +1,6 @@
 # Terraform action
 
-A GitHub action to run HashiCorp Terraform commands.
+GitHub action to run HashiCorp Terraform commands.
 
 ## Inputs
 
